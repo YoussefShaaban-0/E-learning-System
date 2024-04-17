@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/",
+    "/course",
+    "/home",
+    "/login",
+    "/profile",
+    "/register"
+  ]
+}
