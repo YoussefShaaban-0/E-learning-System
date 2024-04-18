@@ -1,0 +1,68 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fffafa;
+    border-radius: 10px;
+  }
+  .icon-search,
+  .icon-notification,
+  .icon-settings,
+  .icon-more {
+    width: 24px;
+    height: auto;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .icons-section {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .profile-pic {
+    width: 72px;
+    height: auto;
+    border-radius: 50%;
+  }
+  .profile-info {
+    flex-grow: 1;
+  }
+  .name {
+    font-weight: bold;
+    margin: 0;
+  }
+  .role {
+    margin: 0;
+    color: #3e3e3e;
+  }
+  .input-search {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
