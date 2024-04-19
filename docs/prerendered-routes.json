@@ -1,9 +1,13 @@
 {
   "routes": [
     "/",
+    "/assignment",
     "/course",
+    "/course-creation",
+    "/exam creation",
     "/home",
     "/login",
+    "/menu",
     "/profile",
     "/register"
   ]
