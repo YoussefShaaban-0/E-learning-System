@@ -1,3 +1,7 @@
+
+/* @import '~@fortawesome/fontawesome-free/css/all.css'
+ */
+
 @font-face {
     font-family: 'Istok Web';
     src: 
@@ -116,3 +120,6 @@
     
 }
 
+body{
+    background-color: #c5d8db;
+}

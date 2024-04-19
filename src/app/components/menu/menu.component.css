@@ -1,0 +1,91 @@
+.cardbackground {
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: #fffafa;
+  }
+  .bg-color{
+    background-color: #fffafa;
+  }
+  .icon{
+    width: 8%;
+    margin-bottom: 10%;
+  }
+  
+  .font{
+    color: #2b59ce;
+    font-family:  'Istok Web', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    /* margin-left: 20px;
+    margin-bottom: 10% */
+  }
+  .font2{
+    color: black;
+    font-family:  'Istok Web', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    /* margin-left: 20px;
+    margin-bottom: 10% */
+  }
+  .fontStyle{
+    font-size: 32px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .efontStyle{
+    font-size: 32px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    color: #DE265E;
+  }
+  .cardd{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  }
+  .w-30{
+  width: 40%;
+  /* height: 40%; */
+  }
+  .ms-30{
+  margin-left: 50px;
+  }
+  .w-20{
+  width: 20%;
+  }
+  .w-70{
+    width: 70%;
+  }
+  .title1{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Istok Web';
+  }
+  .title2{
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Istok Web';
+  }
+  .title{
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Istok Web';
+  }
+  .label2{
+    font-size: 16px;
+    font-family: 'Istok Web';
+    color: black;
+  }
+  .label{
+    /* font-weight: bold; */
+    font-size: 12px;
+    font-family: 'Istok Web';
+  }
+  .fs-7{
+    width: 30%;
+  }
+  .btncolor{
+    background-color: #2525AD;
+  }
