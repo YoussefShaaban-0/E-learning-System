@@ -1,0 +1,384 @@
+<div>
+  <div class="row d-flex flex-row gap-4 ">
+
+
+    <div class="flex flex-column col-lg-2 col-sm-4">
+
+      <div>
+        <app-menu></app-menu>
+      </div>
+
+    </div>
+
+
+    <div class="col-lg-8 col-sm-8">
+      <p class="fontStyle mt-4 mb-0 ">Assignment Creation</p>
+      <div class="d-flex row justify-content-between align-items-center">
+        <div class="col-md-4">
+          <input class="form-control mt-0" placeholder="Search" />
+        </div>
+        <div class="col-md-4 text-center ">
+          <i class="fa-regular fa-bell fs-4  me-3"></i>
+
+          <i class="fa-regular fa-envelope fs-4"></i>
+
+        </div>
+        <div class="col-md-4 d-flex flex-row">
+          <div>
+            <!-- <img class="rounded-circle img-fuild w-100" src="../assets/images/cover.jpeg"> -->
+            <i class="fa-solid fa-circle-user" style="font-size: 3em;"></i>
+          </div>
+          <div class=" d-flex  ms-3 flex-column">
+            <div class="d-flex justify-content-between align-items-center ">
+              <p> <a class="text-decoration-none text-black fw-bold" href="/profile">Habiba Hesham</a> </p>
+              <a href="/profile" class="fa-solid fa-chevron-down fs-6 mb-3 ms-2 text-black"
+                style="text-decoration: none;"></a>
+            </div>
+            <p class="text-muted h">Student</p>
+          </div>
+        </div>
+
+        <div class="d-flex w-100 bg-white rounded flex-column py-3 ">
+          <div class="d-flex flex-row ms-4">
+            <div>
+              <label class="fw-bold fs-5 ">Assignment Title:</label>
+              <input class="bg-muted text-muted fw-bold rounded ms-3 cl" placeholder="Midterm">
+            </div>
+            <div class="ms-5">
+              <label class="fw-bold fs-5 ">Deadline:</label>
+              <input class="cl text-muted fw-bold rounded ms-3 " placeholder="50 mins">
+            </div>
+          </div>
+
+          <div class="msss-30 col-md-11 carddd pt-3  rounded card border">
+
+            <div class="d-flex flex-row ms-3 ">
+              <div class="d-flex flex-row">
+                <div>
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="ms-3">
+                  <label class="fw-bold"> Question(1): </label>
+                </div>
+                <div>
+                  <textarea class="text-muted cl custom-textarea ">
+            Define Matter.
+          </textarea>
+                </div>
+
+              </div>
+              <div class="d-flex mss-30 flex-row">
+                <div>
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <div class="ms-3 ">
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="msss-30 col-md-11 carddd pt-3  rounded  border flex-column">
+            <!-- el parent el kbeer khales elly hy3mlhom fe column -->
+
+
+
+            <!-- el row bta3 qistion 2 w txt area w el img -->
+            <div class="d-flex flex-row ms-4 pb-6">
+
+              <!-- icon & q2 -->
+              <div class="d-flex flex-row">
+                <div>
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="ms-3">
+                  <label class="fw-bold"> Question(2): </label>
+                </div>
+                <div>
+                  <textarea class="text-muted cl rounded ms-4  form-control" rows="2"> </textarea>
+                </div>
+              </div>
+              <!-- for tow icons  -->
+              <div class="d-flex ms-39 flex-row">
+                <div>
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <div class="ms-3 ">
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- el row bta3 el choices -->
+            <div class=" d-flex flex-row ns-30 ">
+              <div class=" d-flex  ">
+                <div>
+                  <label class="fw-bold">
+                    A:
+                  </label>
+                </div>
+                <div class="d-flex flex-row col-5 ms-2">
+                  <input type="text" class="rounded background-white form-control  " placeholder="choice 1"
+                    style="font-size: 12px;">
+
+                </div>
+              </div>
+              <div class=" d-flex ">
+                <div>
+                  <label class="fw-bold">
+                    B:
+                  </label>
+                </div>
+                <div class="d-flex flex-row col-5 ms-2">
+                  <input type="text" class="rounded background-white form-control  " placeholder="choice 2"
+                    style="font-size: 12px;">
+
+                </div>
+              </div>
+              <div class=" d-flex ">
+                <div>
+                  <label class="fw-bold">
+                    C:
+                  </label>
+                </div>
+                <div class="d-flex flex-row col-5 ms-2">
+                  <input type="text" class="rounded background-white form-control  " placeholder="choice 3"
+                    style="font-size: 12px;">
+
+                </div>
+              </div>
+              <div class=" d-flex ">
+                <div>
+                  <label class="fw-bold">
+                    D:
+                  </label>
+                </div>
+                <div class="d-flex flex-row col-5 ms-2">
+                  <input type="text" class="rounded background-white form-control  " placeholder="choice 4"
+                    style="font-size: 12px;">
+
+                </div>
+              </div>
+
+            </div>
+            <!-- radio button -->
+            <div class="d-flex flex-row ns-29 ">
+              <div>
+                <label class="text-muted">
+                  Correct Choice:
+                </label>
+              </div>
+              <div class="d-flex flex-row ms-4">
+                <div class="form-check ">
+                  <input class="form-check-input " type="radio" name="exampleRadios" id="exampleRadio1" value="option1"
+                    checked>
+                  <label class="form-check-label " for="exampleRadio1">
+                    A
+                  </label>
+                </div>
+                <div class="form-check ms-4">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadio2" value="option2">
+                  <label class="form-check-label" for="exampleRadio2">
+                    B
+                  </label>
+                </div>
+                <div class="form-check ms-4">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadio3" value="option3">
+                  <label class="form-check-label" for="exampleRadio3">
+                    C
+                  </label>
+                </div>
+                <div class="form-check ms-4">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadio3" value="option3">
+                  <label class="form-check-label" for="exampleRadio3">
+                    D
+                  </label>
+                </div>
+
+              </div>
+            </div>
+
+
+            <!-- el row bta3 el score wel points -->
+            <div class="d-flex flex-row ns-29  shiftbuttom">
+              <div class="d-flex ">
+                <div>
+                  <label class="text-muted"> Score:</label>
+                </div>
+                <div class="col-3 ms-3">
+                  <input type="text" class="rounded  cl form-control">
+                </div>
+              </div>
+
+              <div class="d-flex ">
+                <div>
+                  <label class="text-muted"> Points:</label>
+                </div>
+                <div class="col-3 ms-3">
+                  <input type="text" class="rounded  cl form-control">
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="col-md-11 ms-5 ns-299 ">
+
+            <button class="btn btn-outline-danger bg-color title text-danger text-start">
+              <i class="fa-solid fa-plus"></i>
+              Add Question
+            </button>
+          </div>
+          <div class="flex-row ns-2999">
+            <div class="d-flex">
+              <button class="custom-textarea text-danger bg-white ">
+                Discard
+              </button>
+              <button class="cl rounded ms-5" style="border-width: 1px;">
+                Keep in Draft
+              </button>
+              <div class="ms-5 ">
+                <button class="btn btn-primary">
+                  Publish
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    
+
+
+    <div>
+      <div class="row d-flex flex-row gap-2">
+          <div class="flex flex-column col-lg-2 col-sm-4">
+              <div>
+                  <app-menu></app-menu>
+              </div>
+          </div>
+  
+          <div class="col-lg-9 col-sm-9">
+              <div class="d-flex row justify-content-between align-items-center py-3">
+                  <div class="col-lg-3">
+                      <p class="fontStyle mt-2 mb-0">Assignments Materials</p>
+                  </div>
+  
+                  <div class="col-lg-4 d-flex flex-row align-items-center justify-content-center">
+                      <div class="col-md-3 text-center">
+                          <i class="fa-regular fa-bell fs-4 me-3"></i>
+                          <i class="fa-regular fa-envelope fs-4"></i>
+                      </div>
+                      <div>
+                          <i class="fa-solid fa-circle-user" style="font-size: 3em"></i>
+                      </div>
+                      <div class="d-flex ms-3 flex-column">
+                          <div class="d-flex justify-content-center align-items-center">
+                              <p>
+                                  <a class="text-decoration-none text-black fw-bold" href="/profile">Habiba Hesham</a>
+                              </p>
+                              <!-- <p class="text-muted">Student</p> -->
+                              <a href="/profile" class="fa-solid fa-chevron-down fs-6 mb-3 ms-2 text-black"
+                                  style="text-decoration: none">
+                              </a>
+  
+                          </div>
+                          <!-- <p class="text-muted m-0">Student</p> -->
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="card bg-white mt-2">
+                  <div class="p-4">
+                      <div class="d-flex flex-row align-items-center gap-5">
+                          <div class="col-lg-5 mb-3">
+                              <p class="title1">course title</p>
+  
+  
+                              <div class="d-flex flex-row align-items-center gap-5">
+                                  <div class="col-lg-5 mb-3">
+                                      <label class="title2">Title</label>
+                                      <input  class="form-control bg-color mb-2 label"
+                                          placeholder="Type here" />
+  
+                                      <label class="title2">Descreption</label>
+                                      <textarea  class="form-control bg-color label"
+                                          style="height: 145px" placeholder="Type here"></textarea>
+                                  </div>
+  
+                                  <div class="col-lg-5">
+                                      <label class="title2">Image</label>
+                                      <textarea class="label form-control bg-color" style="height: 145px"
+                                          placeholder="Add link to new image"></textarea>
+                                  </div>
+                              </div>
+  
+  
+  
+                              <label class="title2">Course Content</label>
+                              <!-- <div *ngFor="let lec of course.lectures; let i = index">
+                                  <div
+                                      class="d-flex flex-row align-items-center justify-content-between card bg-color gap-3 p-2 mb-3">
+                                      <a class="title d-flex justify-content-center align-items-center"
+                                           target="_blank"
+                                          style="text-decoration: none; color: black;">Lecture {{ i + 1 }}</a>
+  
+                                     <p class="title d-flex justify-content-center align-items-center">
+                                {{course.lectures[i]}}
+                                </p>
+                                      <button class="btn btn-outline-danger bg-color title text-danger"
+                                          >
+                                          Delete
+                                      </button>
+                                  </div>
+  
+                              </div>  -->
+                          </div>
+                      </div>
+  
+                      <div class="col-lg-8">
+  
+                          <div *ngFor="let control of cardControls; let i = index"
+                              class="d-flex flex-row align-items-center justify-content-between card bg-color gap-3 p-2 mb-3">
+                              <p class="title d-flex justify-content-center align-items-center">
+                                  Lecture {{ + i + 1}}
+                              </p>
+                              <input #newlec class="form-control bg-color w-50 label" formControlName="title"
+                                  placeholder="Title" />
+                              <button class="btn btn-outline-danger bg-color title text-danger"
+                                  >
+                                  Upload
+                              </button>
+                              <button class="btn btn-outline-danger bg-color title text-danger" (click)="deleteCard(i)">
+                                  Delete
+                              </button>
+                          </div>
+  
+                      </div>
+                      <button class="btn btn-outline-danger bg-color title text-danger" (click)="addCard()">
+                          <i class="fa-solid fa-plus"></i>
+                          Add Chapter
+                      </button>
+  
+                      <div class="text-center">
+                          <button class="btn btn-primary" style="background-color: #4979d1" >
+                              Edit Course
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>

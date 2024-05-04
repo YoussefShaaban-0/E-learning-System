@@ -1,0 +1,109 @@
+<div class="row d-flex flex-row gap-2">
+  <div class="flex flex-column col-lg-2 col-sm-4">
+    <div>
+      <app-menu></app-menu>
+    </div>
+  </div>
+
+  <div class="col-lg-9 col-sm-7">
+    <div class="d-flex row col justify-content-evenly align-items-center mt-5">
+      <div class="col-md-4">
+        <p class="fontStyle mb-0">User Details</p>
+        <!-- <input class="form-control bg-color rounded mt-0" placeholder = "Search"/> -->
+      </div>
+      <div class="col-md-4 text-center">
+        <i class="fa-regular fa-bell fs-4 me-3"></i>
+        <i class="fa-regular fa-envelope fs-4"></i>
+      </div>
+      <div class="col-md-4 d-flex flex-row">
+        <div>
+          <!-- <img class="rounded-circle img-fuild w-100" src="../assets/images/cover.jpeg"> -->
+          <i class="fa-solid fa-circle-user" style="font-size: 3em"></i>
+        </div>
+        <div class="d-flex ms-3 flex-column">
+          <div class="d-flex justify-content-between align-items-center">
+            <p>
+              <a class="text-decoration-none text-black fw-bold" href="/profile"
+                >Habiba Hesham</a
+              >
+            </p>
+            <a
+              href="/profile"
+              class="fa-solid fa-chevron-down fs-6 mb-3 ms-2 text-black"
+              style="text-decoration: none"
+            ></a>
+          </div>
+          <p class="text-muted h">Student</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardbackground py-5 p-4 bg-color mt-3">
+      <div class="d-flex flex-column col-lg-8 gap-5">
+        <div class="d-flex flex-column gap-2">
+          <div class="d-flex flex-row justify-content-between">
+            <p class="title1">USER INFORMATION</p>
+            <button class="btn btn-outline-dark w-25" (click)="updateuser()">
+              Edit
+            </button>
+          </div>
+          <label class="title2">Username</label>
+          <input class="title form-control" [(ngModel)]="user.username" />
+          <label class="title2">Email address</label>
+          <input class="title form-control" [(ngModel)]="user.email" />
+          <label class="title2">Password</label>
+          <input class="title form-control" [(ngModel)]="user.password" />
+          <div>
+            <label class="title2">Role</label>
+            <input class="title form-control" [(ngModel)]="user.role" />
+          </div>
+          <!-- <label class="title2">Last name</label>
+      <input class="form-control"> -->
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <!-- <div class="d-flex flex-row justify-content-between">
+          <p class="title1">Access</p>
+      </div> -->
+          <div class="d-flex flex-row gap-5">
+            <div>
+              <label class="title2">Pending</label>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                [(ngModel)]="user.waiting"
+              />
+              <!--active and pending as radio buttons-->
+              <!-- <div *ngIf="user.waiting">
+                <label class="title2">Pending</label>
+                <input class="form-check-input" type="radio" value="true"/>
+              </div>
+              <div *ngIf="!user.waiting">
+                <label class="title2">Active</label>
+                <input class="form-check-input" type="radio"/>
+              </div> -->
+            </div>
+            <div class="">
+              <label class="title2">Active</label>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                [(ngModel)]="!user.waiting"
+              />
+            </div>
+            <!-- <button class="btn btn-outline-dark w-25">Approve</button> -->
+          </div>
+          <!-- <div class="d-flex flex-row gap-5">
+          <div>
+              <label class="title2">Country</label>
+              <input class="form-control">
+          </div>
+          <div>
+              <label class="title2">Code</label>
+              <input class="form-control">
+          </div>
+      </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

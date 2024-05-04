@@ -1,0 +1,36 @@
+<div [style.background-image]="'url(../assets/images/2.png)'"
+    style="background-size: cover; background-position: center; margin: 0; height: 100vh;">
+    <div class="container-fluid d-flex flex-column vh-100">
+        <div class="row flex-grow-1 align-items-end m-5 ">
+            <div class="col-lg-4 mb-5">
+                <form [formGroup]="myForm" (ngSubmit)="login(myForm)" class="p-5">
+                    <div class="mb-3">
+                        <label class="font2">Email: </label>
+                        <input formControlName="email" class="form-control black-border font" placeholder="Your email"
+                            style="background-color: #FFFAFA" />
+                        <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.dirty || myForm.get('email')?.touched)"
+                            style="color: red;">
+                            Please provide a valid email address.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="font2">Password: </label>
+                        <input class="form-control black-border font" style="background-color: #FFFAFA"
+                            formControlName="password" placeholder="Your password" />
+                        <div *ngIf="myForm.get('password')?.invalid && (myForm.get('password')?.dirty || myForm.get('password')?.touched)"
+                            style="color: red;">
+                            Password must be at least 8 characters long.
+                        </div>
+                    </div>
+                    <div class="align-items-center d-flex flex-column">
+                        <button type="submit" [disabled]="myForm.invalid"
+                            class="btn btn-outline-dark w-50">Login</button>
+                        <div>
+                            <div *ngFor="let message of errorMessages">{{ message }} </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
