@@ -117,31 +117,31 @@
     <div class="cardbackground py-5 p-4 bg-color mt-3">
       
       <p class="title1">Assignments</p>
-      <div class="d-flex flex-column gap-3">
-        <div class="card col">
+      <div class="d-flex flex-column gap-3" *ngFor="let assignment of assignmentObservable | async; let i = index">
+        <div [routerLink]="['/assignment-creation', assignment.courseId]" class="card col">
           <div class="d-flex flex-row justify-content-between m-3">
-            <p class="title">Chemistry<br><span class="label">Chapter5</span></p>
-            <p class="title">Daily task<br><span class="label">Page10</span></p>
-            <p class="title">11.00AM</p>
+            <p class="title">name</p>
+            <p class="title">{{assignment.title}}</p>
+            <p class="title">{{assignment.deadline}}</p>
             <p class="title">Pending</p>
           </div>
         </div>
-        <div class="card col">
+        <!-- <div class="card col">
           <div class="d-flex flex-row justify-content-between m-3">
             <p class="title">Physics<br><span class="label">Chapter4</span></p>
             <p class="title">Daily task<br><span class="label">Page 18</span></p>
             <p class="title">11.00AM</p>
             <p class="title">Pending</p>
           </div>
-        </div>
-        <div class="card col">
+        </div> -->
+        <!-- <div class="card col">
           <div class="d-flex flex-row justify-content-between m-3">
             <p class="title">Biology<br><span class="label">Chapter2</span></p>
             <p class="title">Daily task<br><span class="label">Page 12</span></p>
             <p class="title">11.00AM</p>
             <p class="title">Completed</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 

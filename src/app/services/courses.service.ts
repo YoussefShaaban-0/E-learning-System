@@ -3,31 +3,14 @@ import { Course } from '../interfaces/course';
 import { Firestore, QuerySnapshot, addDoc, arrayUnion, collection, collectionData, doc, getDocs, query, setDoc, updateDoc, where } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { stringify } from 'querystring';
+import { Assignment } from '../interfaces/assignment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
   lec: string[] = ["lecture1"]
-  
-  // url = "https://fakestoreapi.com/products"
-  // courses: Course[] = [
-  //   {
-  //     title:"math",
-  //     description:"anything",
-  //     img:""
-  //   },
-  //   {
-  //     title:"math",
-  //     description:"anything",
-  //     img:""
-  //   },
-  //   {
-  //     title:"math",
-  //     description:"anything",
-  //     img:""
-  //   }
-  // ]
+
   constructor(private firestore: Firestore) { }
 
   getCourses(): Observable<Course[]> {
@@ -77,16 +60,6 @@ export class CoursesService {
     }
   }
 
-  // addLecture(courseId: string, newLecture: string): Promise<void> {
-  //   const coursesCollection = collection(this.firestore, 'courses');
-  //   const course = doc(coursesCollection, courseId);
-  //   // updateDoc(course, lectures: this.firestore.FieldValue.arrayUnion(newLecture) )
-  //   // return this.firestore.collection('courses').doc(courseId)
-  //   update
-  //   .update({
-  //     lectures: this.firestore.FieldValue.arrayUnion(newLecture)
-  //   });
-  // }
   addLecture(courseId: string, newLecture: string) {
     const coursesCollection = collection(this.firestore, 'courses');
     const course = doc(coursesCollection, courseId);
@@ -94,4 +67,18 @@ export class CoursesService {
       lectures: arrayUnion(newLecture)
     });
   }
+
+  // addAssignment(assignment: Assignment): Promise<any> {
+  //   const assignmentsCollection = collection(this.firestore, 'assignments');
+  //   return assignmentsCollection.add(assignment);
+  // }
+
+
+  // addAssignment(courseId: string, newLecture: string) {
+  //   const coursesCollection = collection(this.firestore, 'courses');
+  //   const course = doc(coursesCollection, courseId);
+  //   updateDoc(course, {
+  //     assignment: arrayUnion(newLecture)
+  //   });
+  // }
 }

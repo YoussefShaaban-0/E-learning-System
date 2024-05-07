@@ -13,7 +13,7 @@ import { AddMaterialsComponent } from './components/Admin/add-materials/add-mate
 import { AdminCoursesComponent } from './components/Admin/admin-courses/admin-courses.component';
 import { HomeComponent } from './components/User/home/home.component';
 import { MaterialsComponent } from './components/User/materials/materials.component';
-import { ExamcreationComponent } from './components/examcreation/examcreation.component';
+import { ExamcreationComponent } from './components/Admin/examcreation/examcreation.component';
 
 export const routes: Routes = [
     // {path: '',component: FirstComponent},

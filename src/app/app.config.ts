@@ -6,7 +6,6 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { Auth, getAuth, provideAuth} from '@angular/fire/auth';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
-
 const firebaseConfig = {
   apiKey: "AIzaSyB-GteoNm5XQnXoRai9QwfVmF4N0F9RO4Q",
   authDomain: "edulearn-a1a18.firebaseapp.com",
@@ -23,7 +22,9 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       provideFirebaseApp(() => initializeApp(firebaseConfig)),
       provideFirestore(() => getFirestore()),
-      provideAuth(() => getAuth())
+      provideAuth(() => getAuth()),
+      // provideFirebaseApp(() => initializeApp(environment.firebase)),
+      provideFirestore(() => getFirestore()),
     )
   ]
 };
