@@ -19,14 +19,14 @@ export class LoginComponent{
 
   myForm: FormGroup;
   errorMessages: string[] = [];
-  user: User = {
-    id: '',
-    username: 'username',
-    email: 'email',
-    role: 'student',
-    waiting: true,
-    password: 'password',
-  };
+  // user: User = {
+  //   id: '',
+  //   username: 'username',
+  //   email: 'email',
+  //   role: 'student',
+  //   waiting: true,
+  //   password: 'password',
+  // };
 
 
   constructor(private userService: UsersService, private router: Router, private formBuilder: FormBuilder){
@@ -56,7 +56,8 @@ export class LoginComponent{
             if (user.role === 'admin') {
               this.router.navigate(['/approvals']);
             } else {
-              this.router.navigate(['/home']);
+              this.router.navigate(['/home', user.id]);
+              // ['/home', user.id]
             }
           });
       } else {

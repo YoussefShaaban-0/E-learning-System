@@ -89,3 +89,22 @@ width: 20%;
 .btncolor{
   background-color: #2525AD;
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure the card takes full width */
+}
+
+.card .d-flex {
+  width: 100%; /* Ensure the flex container inside the card takes full width */
+}
+
+.card .d-flex .title {
+  margin: 0; /* Reset margin for consistent spacing */
+}
+
+/* Optional: Add some spacing between columns */
+.card .d-flex .d-flex {
+  flex: 1; /* Distribute space equally among columns */
+  padding: 0 10px; /* Adjust as needed */
+}

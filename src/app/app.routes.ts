@@ -14,13 +14,18 @@ import { AdminCoursesComponent } from './components/Admin/admin-courses/admin-co
 import { HomeComponent } from './components/User/home/home.component';
 import { MaterialsComponent } from './components/User/materials/materials.component';
 import { ExamcreationComponent } from './components/Admin/examcreation/examcreation.component';
+import { SubmitAssignmentComponent } from './components/User/submit-assignment/submit-assignment.component';
+import { UserCorsesComponent } from './components/User/user-corses/user-corses.component';
+import { SubmittedAssiignmentsComponent } from './components/Admin/submitted-assiignments/submitted-assiignments.component';
+import { SubmittedAssignmentsService } from './services/submitted-assignments.service';
+import { SubmittedAssignmentComponent } from './components/Admin/submitted-assignment/submitted-assignment.component';
 
 export const routes: Routes = [
     // {path: '',component: FirstComponent},
     {path: '', component: RegisterComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'home', component: HomeComponent},
-    {path: 'course', component: CoursesComponent},
+    {path: 'home/:id', component: HomeComponent},
+    {path: 'course/:id', component: CoursesComponent},
     {path: 'profile', component: ProfileComponent},
     {path: 'assignment-creation/:id', component: ExamcreationComponent},
     {path: 'course-creation', component: CourseCreationComponent},
@@ -30,5 +35,9 @@ export const routes: Routes = [
     {path: 'updateuser/:id', component: UpdateUserComponent},
     {path: 'add-materials/:id', component: AddMaterialsComponent},
     {path: 'admin-courses', component: AdminCoursesComponent},
-    {path: 'materials/:id', component: MaterialsComponent}
+    {path: 'materials/:id/:mid', component: MaterialsComponent},
+    {path: 'submit-assignment/:id/:assignmentId', component: SubmitAssignmentComponent},
+    {path: 'user-course/:id', component: UserCorsesComponent},
+    {path: 'submitted-assignments', component: SubmittedAssiignmentsComponent},
+    {path: 'submitted-assignment/:id', component: SubmittedAssignmentComponent}
 ];

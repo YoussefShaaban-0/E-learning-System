@@ -21,7 +21,7 @@ export class CoursesService {
 
   addCourse(title: any, description: any, img: any){
     const coursesCollection = collection(this.firestore, 'courses');
-    addDoc(coursesCollection, {title, description, img})
+    addDoc(coursesCollection, {title, description, img: "../assets/images/default.jpg"})
   }
 
   updateCourse(id: string, updatedCourse: Course) {

@@ -7,6 +7,7 @@ import { FormArray} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from "../admin-menu/menu.component";
+import { AppBarComponent } from "../../app-bar/app-bar.component";
 
 @Component({
     selector: 'app-add-materials',
@@ -14,7 +15,7 @@ import { MenuComponent } from "../admin-menu/menu.component";
     templateUrl: './add-materials.component.html',
     styleUrl: './add-materials.component.css',
     imports: [CommonModule, FormsModule, RouterModule,
-        ReactiveFormsModule, MenuComponent]
+        ReactiveFormsModule, MenuComponent, AppBarComponent]
 })
 export class AddMaterialsComponent {
 

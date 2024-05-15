@@ -1,0 +1,252 @@
+<div>
+    <div class="row d-flex flex-row gap-2">
+        <div class="flex flex-column col-lg-2 col-sm-4">
+            <div>
+                <app-menu></app-menu>
+            </div>
+        </div>
+
+        <div class="col-lg-9 col-sm-9">
+            <div class="d-flex row justify-content-between align-items-center py-3">
+                <div class="col-lg-3">
+                    <p class="fontStyle mt-2 mb-0">Assignment</p>
+                </div>
+
+                <div class="col-lg-4 d-flex flex-row align-items-center justify-content-center">
+                    <div class="col-md-3 text-center">
+                        <i class="fa-regular fa-bell fs-4 me-3"></i>
+                        <i class="fa-regular fa-envelope fs-4"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-circle-user" style="font-size: 3em"></i>
+                    </div>
+                    <div class="d-flex ms-3 flex-column">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p>
+                                <a class="text-decoration-none text-black fw-bold" href="/profile">Habiba Hesham</a>
+                            </p>
+                            <!-- <p class="text-muted">Student</p> -->
+                            <a href="/profile" class="fa-solid fa-chevron-down fs-6 mb-3 ms-2 text-black"
+                                style="text-decoration: none">
+                            </a>
+
+                        </div>
+                        <!-- <p class="text-muted m-0">Student</p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-white p-3 mb-2">
+                <div class="m-4">
+                    <div class="d-flex flex-row align-items-center gap-5">
+                        <div class=" mb-3">
+                            <div class="d-flex flex-row align-items-center justify-content-center gap-4">
+                                <div class="d-flex flex-row gap-2 align-items-center">
+                                    <label class="fw-bold">Title: </label>
+                                    <label class="fw-bold">{{assignment.title}}</label>
+                                </div>
+                                <!-- <div class="d-flex flex-row gap-2 align-items-center">
+                                    <label class="fw-bold">Dedline: </label>
+                                    <label class="fw-bold">{{assignment.deadline}}</label>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- component.html -->
+                    <div class="d-flex flex-column gap-3">
+                        <div *ngFor="let q of assignment.question let i = index" class="gap-3">
+                            <div class="d-flex carddd rounded border flex-column gap-2">
+                                <div class="d-flex flex-row justify-content-between m-4 align-items-center">
+                                    <div class="d-flex flex-row col-lg-5 align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-bars"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <label class="fw-bold"> Question{{i+1}}: </label>
+                                        </div>
+                                        <div class="w-100">
+                                            <p class="label ms-3 mt-3"
+                                            >{{assignment.question[i]}} </p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center b-3 ms-5">
+                                    <div class="d-flex flex-row mb-3">
+                                        <div class="ms-3">
+                                            <label class="fw-bold"> Answer: </label>
+                                        </div>
+                                        <div class="w-100">
+                                            <p class="text-muted ms-3">{{assignment.choices[i]}} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- el row bta3 el choices -->
+
+                                <!-- <div [ngClass]="{'d-none': isCollapsed}"
+                                    class=" d-flex flex-row align-items-center justify-content-center m-4">
+                                    <div class=" d-flex flex-row align-items-center justify-content-center m-4">
+                                        <div class=" d-flex  ">
+                                            <div>
+                                                <label class="fw-bold">
+                                                    A:
+                                                </label>
+                                            </div>
+                                            <div class="d-flex flex-row col-5 ms-2">
+                                                <input [(ngModel)]="choices[0]" type="text" class="rounded background-white form-control  "
+                                                    placeholder="choice 1" style="font-size: 12px;">
+
+                                            </div>
+                                        </div>
+                                        <div class=" d-flex ">
+                                            <div>
+                                                <label class="fw-bold">
+                                                    B:
+                                                </label>
+                                            </div>
+                                            <div class="d-flex flex-row col-5 ms-2">
+                                                <input [(ngModel)]="choices[1]" type="text" class="rounded background-white form-control  "
+                                                    placeholder="choice 2" style="font-size: 12px;">
+
+                                            </div>
+                                        </div>
+                                        <div class=" d-flex ">
+                                            <div>
+                                                <label class="fw-bold">
+                                                    C:
+                                                </label>
+                                            </div>
+                                            <div class="d-flex flex-row col-5 ms-2">
+                                                <input [(ngModel)]="choices[2]" type="text" class="rounded background-white form-control  "
+                                                    placeholder="choice 3" style="font-size: 12px;">
+
+                                            </div>
+                                        </div>
+                                        <div class=" d-flex ">
+                                            <div>
+                                                <label class="fw-bold">
+                                                    D:
+                                                </label>
+                                            </div>
+                                            <div class="d-flex flex-row col-5 ms-2">
+                                                <input [(ngModel)]="choices[3]" type="text" class="rounded background-white form-control  "
+                                                    placeholder="choice 4" style="font-size: 12px;">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> -->
+                                <!-- radio button -->
+                                <!-- <div [ngClass]="{'d-none': isCollapsed}"
+                                    class="d-flex flex-row align-items-center justify-content-center gap-3">
+                                    <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+                                        <div>
+                                            <label class="text-muted">
+                                                Correct Choice:
+                                            </label>
+                                        </div>
+                                        <div class="d-flex flex-row ms-4">
+                                            <div class="form-check ">
+                                                <input class="form-check-input " type="radio" name="exampleRadios"
+                                                    id="exampleRadio1" value="option1" checked>
+                                                <label class="form-check-label " for="exampleRadio1">
+                                                    A
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-4">
+                                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                                    id="exampleRadio2" value="option2">
+                                                <label class="form-check-label" for="exampleRadio2">
+                                                    B
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-4">
+                                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                                    id="exampleRadio3" value="option3">
+                                                <label class="form-check-label" for="exampleRadio3">
+                                                    C
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-4">
+                                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                                    id="exampleRadio3" value="option3">
+                                                <label class="form-check-label" for="exampleRadio3">
+                                                    D
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <!--answer as text-->
+
+
+
+                                <!-- el row bta3 el score wel points -->
+                                <!-- <div [ngClass]="{'d-none': isCollapsed}" -->
+                                <!-- class="d-flex flex-row align-items-center mb-3"> -->
+
+                                <!-- </div> -->
+
+                                <!-- <div class="d-flex ">
+                                            <div>
+                                                <label class="text-muted"> Points:</label>
+                                            </div>
+                                            <div class="col-3 ms-3">
+                                                <input type="text" class="rounded cl form-control" [(ngModel)]="points">
+                                            </div>
+                                        </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button class="btn btn-outline-danger bg-color title text-danger mt-3" >
+                        <i class="fa-solid fa-plus"></i>
+                        Add Question
+                    </button> -->
+                </div>
+                <div class="d-flex justify-content-start ms-5">
+                    <div>
+                        <label class="text-muted"> Score:</label>
+                    </div>
+                    <div class="col-2 ms-3">
+                        <input type="text" class="rounded cl  form-control"
+                         [(ngModel)]="score"   >
+                    </div>
+                </div>
+
+
+                <div class=" d-flex flex-row gap-3 justify-content-end">
+                    <!-- <div class="">
+                        <button class="btn btn-outline-danger  bg-color text-danger">
+                            Discard
+                        </button>
+                    </div> -->
+                    <!-- <button class="cl rounded ms-5" style="border-width: 1px;">
+                            Keep in Draft
+                        </button> -->
+                        <!-- <div class="d-flex flex-row align-items-center mb-3 justify-content-start"> -->
+
+                        <!-- </div> -->
+                    <div class=" ">
+                        <button class="btn btn-outline-primary " (click)="addScore()">
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -89,3 +89,25 @@
   .btncolor{
     background-color: #2525AD;
   }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .card .d-flex {
+    width: 100%;
+    padding: 10px; /* Adjust padding as necessary */
+  }
+  
+  .card .d-flex .title {
+    margin: 0; /* Reset margin for consistent spacing */
+    flex: 1; /* Ensure items take equal space if needed */
+    white-space: nowrap; /* Prevent text wrapping if desired */
+    text-align: center; /* Center text for consistent alignment */
+  }
+  
+  .card .btn {
+    margin-left: auto; /* Align the button to the end */
+  }
+  

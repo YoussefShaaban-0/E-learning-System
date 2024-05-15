@@ -4,28 +4,28 @@ import { CoursesService } from '../../../services/courses.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Course } from '../../../interfaces/course';
-import { FormArray} from '@angular/forms';
+import { FormArray } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Assignment } from '../../../interfaces/assignment';
 import { AssignmentsService } from '../../../services/assignments.service';
 
 @Component({
-    selector: 'app-examcreation',
-    standalone: true,
-    templateUrl: './examcreation.component.html',
-    styleUrl: './examcreation.component.css',
-    imports: [CommonModule, FormsModule, RouterModule,
-      ReactiveFormsModule, MenuComponent]
+  selector: 'app-examcreation',
+  standalone: true,
+  templateUrl: './examcreation.component.html',
+  styleUrl: './examcreation.component.css',
+  imports: [CommonModule, FormsModule, RouterModule,
+    ReactiveFormsModule, MenuComponent]
 })
 export class ExamcreationComponent {
-// for assignments
+  // for assignments
   title: string = '';
   deadline: string = '';
   questions: string[] = [];
   choices: string[] = [];
   correctChoices: boolean[] = [];
-  score: number[] = [];
+  score: number = 0;
   points: number = 0;
   // coursename: string = '';
 
@@ -41,12 +41,13 @@ export class ExamcreationComponent {
     img: 'role',
     lectures: this.lec,
   };
+  // lengthOfLectures = this.course.lectures.length;
 
-  lengthOfLectures = this.course.lectures.length;
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute, 
-    private router: Router, private fb: FormBuilder, private asignmentService: AssignmentsService){
+  constructor(private coursesService: CoursesService, private route: ActivatedRoute,
+    private router: Router, private fb: FormBuilder, private asignmentService: AssignmentsService) {
     this.cardForm = this.fb.group({
-      cards: this.fb.array([])}
+      cards: this.fb.array([])
+    }
     );
     this.addCard();
   }
@@ -74,8 +75,8 @@ export class ExamcreationComponent {
 
 
   async ngOnInit(): Promise<void> {
-    
-  // this.isCollapsed = new Array(this.cardControls.length).fill(true);
+
+    // this.isCollapsed = new Array(this.cardControls.length).fill(true);
     this.courseId = this.route.snapshot.paramMap.get('id');
     try {
       this.course = await this.coursesService.getCourse(this.courseId);
@@ -83,30 +84,30 @@ export class ExamcreationComponent {
       console.error('Error fetching user:', error);
     }
   }
-  
+
 
   addAssignment() {
     const assignment: Assignment = {
-        id: '', // Generate an ID or use Firebase auto-generated ID
-        courseId: this.courseId,
-        title: this.title,
-        deadline: this.deadline,
-        question: this.questions,
-        choices: this.choices,
-        // correctChoice: this.correctChoices,
-        score: this.score,
-        // points: this.points
+      id: '', // Generate an ID or use Firebase auto-generated ID
+      courseId: this.courseId,
+      title: this.title,
+      deadline: this.deadline,
+      question: this.questions,
+      choices: this.choices,
+      // correctChoice: this.correctChoices,
+      score: this.score,
+      // points: this.points
     };
     this.asignmentService.addAssignment(assignment);
-}
+  }
 
-// setCorrectChoice(choice: any) {
-//   this.choices.forEach(c => {
-//       if (c === choice) {
-//           c.correct = true;
-//       } else {
-//           c.correct = false;
-//       }
-//   });
-// }
+  // setCorrectChoice(choice: any) {
+  //   this.choices.forEach(c => {
+  //       if (c === choice) {
+  //           c.correct = true;
+  //       } else {
+  //           c.correct = false;
+  //       }
+  //   });
+  // }
 }

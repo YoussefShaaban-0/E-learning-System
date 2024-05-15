@@ -7,6 +7,6 @@ export interface Assignment {
     question: string[];
     choices: string[];
     // correctChoice: boolean[];
-    score: number[];
+    score: number;
     // points: number 
 }

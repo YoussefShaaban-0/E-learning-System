@@ -4,6 +4,8 @@ import {
   Firestore,
   QuerySnapshot,
   addDoc,
+  arrayRemove,
+  arrayUnion,
   collection,
   collectionData,
   deleteDoc,
@@ -11,10 +13,12 @@ import {
   getDocs,
   query,
   setDoc,
+  updateDoc,
   where,
 } from '@angular/fire/firestore';
 import { Observable, map } from 'rxjs';
 import { Auth, user } from '@angular/fire/auth';
+import { Course } from '../interfaces/course';
 
 @Injectable({
   providedIn: 'root',
@@ -58,6 +62,12 @@ export class UsersService {
     deleteDoc(user);
   }
 
+  // deleteCourse(id: string) {
+  //   const usersCollection = collection(this.firestore, 'users');
+  //   const user = doc(usersCollection, id);
+  //   deleteDoc(user);
+  // }
+
   updateUser(id: string, updatedUser: User) {
     const usersCollection = collection(this.firestore, 'users');
     const user = doc(usersCollection, id);
@@ -81,8 +91,8 @@ export class UsersService {
         password: userData['password'],
         waiting: userData['waiting'],
         role: userData['role'],
-        
-        
+        courses: userData['courses'] || [],
+        requestedCourses: userData['requestedCourses'] || [],
         // Add other properties as needed
       };
       return user;
@@ -94,6 +104,8 @@ export class UsersService {
         role: 'role',
         waiting: true,
         password: 'password',
+        courses: [],
+        requestedCourses: [],
       };
       return user;
     }
@@ -114,8 +126,8 @@ export class UsersService {
         password: userData['password'],
         waiting: userData['waiting'],
         role: userData['role'],
-        
-        
+        courses: userData['courses'] || [],
+        requestedCourses: userData['requestedCourses'] || [],
         // Add other properties as needed
       };
       return user;
@@ -127,8 +139,35 @@ export class UsersService {
         role: 'role',
         waiting: true,
         password: 'password',
+        courses: [],
+        requestedCourses: [],
       };
       return user;
     }
+  }
+
+  addRequestedCourse(userId: string, requestedCourseId: string) {
+    const userCollection = collection(this.firestore, 'users');
+    const user = doc(userCollection, userId);
+    updateDoc(user, {
+      requestedCourses: arrayUnion(requestedCourseId)
+    });
+  }
+
+  addMyCourse(userId: string, courseId: string) {
+    const userCollection = collection(this.firestore, 'users');
+    const user = doc(userCollection, userId);
+    updateDoc(user, {
+      courses: arrayUnion(courseId)
+    });
+  }
+
+  
+  deleteCourse(userId: string, course: any) {
+    const userCollection = collection(this.firestore, 'users');
+    const user = doc(userCollection, userId);
+    updateDoc(user, {
+      requestedCourses: arrayRemove(course)
+    });
   }
 }

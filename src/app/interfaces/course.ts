@@ -4,4 +4,5 @@ export interface Course {
     description: string;
     img: string;
     lectures: string[];
+//    isEnrolled: boolean;
 }
