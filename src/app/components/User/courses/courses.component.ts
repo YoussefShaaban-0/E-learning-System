@@ -9,13 +9,14 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { UserMenuComponent } from "../user-menu/user-menu.component";
 import { UsersService } from '../../../services/users.service';
 import { User } from '../../../interfaces/user';
+import { AppBarComponent } from "../../app-bar/app-bar.component";
 
 @Component({
-  selector: 'app-courses',
-  standalone: true,
-  templateUrl: './courses.component.html',
-  styleUrl: './courses.component.css',
-  imports: [CommonModule, RouterModule, FormsModule, UserMenuComponent]
+    selector: 'app-courses',
+    standalone: true,
+    templateUrl: './courses.component.html',
+    styleUrl: './courses.component.css',
+    imports: [CommonModule, RouterModule, FormsModule, UserMenuComponent, AppBarComponent]
 })
 export class CoursesComponent {
 

@@ -13,13 +13,14 @@ import { UserMenuComponent } from "../user-menu/user-menu.component";
 import { Progress, User } from '../../../interfaces/user';
 import { UsersService } from '../../../services/users.service';
 import { ProgressService } from '../../../services/progress.service';
+import { AppBarComponent } from "../../app-bar/app-bar.component";
 
 @Component({
     selector: 'app-materials',
     standalone: true,
     templateUrl: './materials.component.html',
     styleUrl: './materials.component.css',
-    imports: [CommonModule, RouterModule, FormsModule, UserMenuComponent]
+    imports: [CommonModule, RouterModule, FormsModule, UserMenuComponent, AppBarComponent]
 })
 export class MaterialsComponent {
 

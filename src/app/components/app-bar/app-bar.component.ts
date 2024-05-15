@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../../interfaces/user';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-app-bar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './app-bar.component.html',
   styleUrl: './app-bar.component.css'
 })

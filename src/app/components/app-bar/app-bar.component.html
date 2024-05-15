@@ -1,6 +1,6 @@
-<div class="col-lg-4 d-flex flex-row align-items-center justify-content-center">
-    
-    <div class="col-md-3 text-center">
+<div class="d-flex flex-row align-items-center justify-content-center">
+
+    <div class="col-md-5 text-center">
         <i class="fa-regular fa-bell fs-4 me-3"></i>
         <i class="fa-regular fa-envelope fs-4"></i>
     </div>
@@ -9,14 +9,16 @@
     </div>
     <div class="d-flex ms-3 flex-column">
         <div class="d-flex justify-content-center align-items-center">
-            <p>
-                <a class="text-decoration-none text-black fw-bold" href="/profile">{{user.username}}</a>
-            </p>
-            <!-- <p class="text-muted">Student</p> -->
-            <a href="/profile" class="fa-solid fa-chevron-down fs-6 mb-3 ms-2 text-black" style="text-decoration: none">
+            <div class="d-flex flex-column">
+                <label routerLink="/profile" class="text-decoration-none text-black fw-bold">{{user.username}}</label>
+                <label class="text-muted m-0">{{user.role}}</label>
+            </div>
+            <!-- <p class="text-muted"></p> -->
+            <a href="/profile" class="fa-solid fa-chevron-down fs-6 mb-3 ms-3 text-black" style="text-decoration: none">
             </a>
 
         </div>
-        <!-- <p class="text-muted m-0">Student</p> -->
+
+
     </div>
 </div>

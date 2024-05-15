@@ -9,13 +9,14 @@ import { UsersService } from '../../../services/users.service';
 import { Progress, User } from '../../../interfaces/user';
 import { UserMenuComponent } from "../user-menu/user-menu.component";
 import { ProgressService } from '../../../services/progress.service';
+import { AppBarComponent } from "../../app-bar/app-bar.component";
 
 @Component({
     selector: 'app-user-corses',
     standalone: true,
     templateUrl: './user-corses.component.html',
     styleUrl: './user-corses.component.css',
-    imports: [CommonModule, RouterModule, FormsModule, UserMenuComponent]
+    imports: [CommonModule, RouterModule, FormsModule, UserMenuComponent, AppBarComponent]
 })
 export class UserCorsesComponent {
 

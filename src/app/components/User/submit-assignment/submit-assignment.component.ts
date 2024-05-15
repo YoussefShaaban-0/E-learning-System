@@ -10,13 +10,14 @@ import { SubmittedAssignmentsService } from '../../../services/submitted-assignm
 import { UserMenuComponent } from "../user-menu/user-menu.component";
 import { User } from '../../../interfaces/user';
 import { UsersService } from '../../../services/users.service';
+import { AppBarComponent } from "../../app-bar/app-bar.component";
 
 @Component({
     selector: 'app-submit-assignment',
     standalone: true,
     templateUrl: './submit-assignment.component.html',
     styleUrl: './submit-assignment.component.css',
-    imports: [MenuComponent, CommonModule, FormsModule, RouterModule, UserMenuComponent]
+    imports: [MenuComponent, CommonModule, FormsModule, RouterModule, UserMenuComponent, AppBarComponent]
 })
 export class SubmitAssignmentComponent {
   userId: any;
