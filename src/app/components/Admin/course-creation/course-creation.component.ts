@@ -14,30 +14,13 @@ import { MenuComponent } from "../admin-menu/menu.component";
     imports: [CommonModule, ReactiveFormsModule, MenuComponent]
 })
 export class CourseCreationComponent {
-  cardForm: FormGroup;
 
   constructor(private coursesService: CoursesService, private router: Router, private fb: FormBuilder){
-    this.cardForm = this.fb.group({
-      cards: this.fb.array([])}
-    );
-    this.addCard();
+   
+
   }
 
-  get cardControls() {
-    return (this.cardForm.get('cards') as FormArray).controls;
-  }
 
-  addCard() {
-    const cards = this.cardForm.get('cards') as FormArray;
-    cards.push(this.fb.group({
-      title: '',
-      content: ''
-    }));
-  }
-  deleteCard(index: number) {
-    const cards = this.cardForm.get('cards') as FormArray;
-    cards.removeAt(index);
-  }
 
   addcourse(title: any, description: any, img: any){
     this.coursesService.addCourse(title.value, description.value, img.value)
@@ -47,20 +30,20 @@ export class CourseCreationComponent {
     this.router.navigate(['/admin-courses'])
   }
 
-  selectedImage: string | ArrayBuffer | null = null;
+  // selectedImage: string | ArrayBuffer | null = null;
 
-  onFileSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files[0]) {
-      const file = input.files[0];
-      const reader = new FileReader();
+  // onFileSelected(event: Event): void {
+  //   const input = event.target as HTMLInputElement;
+  //   if (input.files && input.files[0]) {
+  //     const file = input.files[0];
+  //     const reader = new FileReader();
       
-      reader.onload = () => {
-        this.selectedImage = reader.result;
-      };
+  //     reader.onload = () => {
+  //       this.selectedImage = reader.result;
+  //     };
 
-      reader.readAsDataURL(file);
-    }
-  }
+  //     reader.readAsDataURL(file);
+  //   }
+  // }
 
 }

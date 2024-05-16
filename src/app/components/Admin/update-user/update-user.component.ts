@@ -39,7 +39,8 @@ export class UpdateUserComponent {
   courses: Course[] = [];
   acceptStatus: { [courseId: string]: boolean } = {};
 
-  constructor(private userservice: UsersService, private route: ActivatedRoute, private router: Router, private coursesService: CoursesService){
+  constructor(private userservice: UsersService, private route: ActivatedRoute, private router: Router, 
+    private coursesService: CoursesService){
   }
 
   async ngOnInit(): Promise<void> {
@@ -62,7 +63,7 @@ export class UpdateUserComponent {
 
   updateuser()
   {
-    // this.userservice.updateUser(this.userId, this.user);
+    this.userservice.updateUser(this.userId, this.user);
     this.router.navigate(['/approvals'])
   }
 

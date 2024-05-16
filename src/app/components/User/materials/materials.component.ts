@@ -140,6 +140,7 @@ export class MaterialsComponent {
       completedLectures: this.completedLectures,
     }
     this.progressService.addProgress(pro);
+    this.router.navigate(['/user-course', this.userId])
   }
 
   check(i: any){

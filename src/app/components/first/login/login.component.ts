@@ -55,10 +55,13 @@ export class LoginComponent{
         this.userService.getUserByEmail(form.value.email).then(user => {
             if (user.role === 'admin') {
               this.router.navigate(['/approvals']);
-            } else {
+            } else if (user.role === 'student') {
               this.router.navigate(['/home', user.id]);
               // ['/home', user.id]
+            } else {
+              this.router.navigate(['/admin-courses']);
             }
+
           });
       } else {
         this.errorMessages.push('Incorrect email or password');

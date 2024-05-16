@@ -27,7 +27,11 @@ export class RegisterComponent {
 
 
   adduser(form: FormGroup){
-    this.usersService.addUser(form.value.username, form.value.email, form.value.password)
+    this.usersService.addUser(
+      form.value.username, 
+      form.value.email, 
+      form.value.password)
+      
     form.value.username = ''; 
     form.value.email = '';
     form.value.password = '';

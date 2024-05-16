@@ -15,7 +15,9 @@ import { MenuComponent } from "../admin-menu/menu.component";
     imports: [CommonModule, RouterModule, FormsModule, MenuComponent]
 })
 export class AdminCoursesComponent {
+
   coursesObservable: Observable<Course[]>
+  
   constructor(public coursesService: CoursesService){
     this.coursesObservable = this.coursesService.getCourses();
   }
